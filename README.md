@@ -7,7 +7,7 @@ This repository provides examples for [Gym Starter Kit](https://github.com/marev
 
 ### RandomAgent
 
-    $ gym-start --agent random_agent.RandomAgent
+    $ gym-start --agent general.RandomAgent
 
 ## Pong-v0
 

@@ -16,4 +16,4 @@ class RandomAgent(GymKitAgent):
 
 
 if __name__ == '__main__':
-    sys.exit(gymkit.main(['--agent', 'random_agent.RandomAgent']))
+    sys.exit(gymkit.main(['--agent', 'general.random_agent.RandomAgent']))
