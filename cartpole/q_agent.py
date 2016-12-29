@@ -11,7 +11,7 @@ import math
 
 class QAgent(QLearning):
     def __init__(self, env):
-        super().__init__(env, epsilon=1.0, alpha=0.5, gamma=0.99,
+        super().__init__(env, epsilon=1.0, alpha=0.5, gamma=0.99, max_step=250,
                          alpha_decay=lambda a, t: max(0.1, min(0.5, 1.0 - math.log10((t + 1) / 25))),
                          epsilon_decay=lambda eps, t: max(0.01, min(1.0, 1.0 - math.log10((t + 1) / 25))))
 
