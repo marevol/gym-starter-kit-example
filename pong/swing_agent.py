@@ -8,7 +8,7 @@ from gymkit.agent import GymKitAgent
 
 
 class SwingAgent(GymKitAgent):
-    def __init__(self, env, interval=30):
+    def __init__(self, env, interval=5):
         super().__init__(env)
         if env.spec.id != 'Pong-v0':
             raise ValueError('{} is not supported. Use Pong-v0.'.format(env.id))
