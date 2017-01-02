@@ -51,3 +51,11 @@ gym-startコマンドを実行します。
 
 以下のようなウィンドウが表示されれば、問題ありません。
 ![CartPole](./images/setup_cartpole_1.png)
+
+## ハンズオン資料
+
+適当な場所に今回の資料をcloneしてください。
+
+    $ git clone https://github.com/marevol/gym-starter-kit-example.git
+    $ cd gym-starter-kit-example/handson/ja
+
