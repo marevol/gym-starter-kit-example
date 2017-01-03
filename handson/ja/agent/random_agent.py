@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from gymkit.agent import GymKitAgent
 
 
@@ -7,4 +9,3 @@ class RandomAgent(GymKitAgent):
 
     def act(self, observation):
         return None
-
