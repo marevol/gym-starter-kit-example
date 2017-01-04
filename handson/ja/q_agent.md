@@ -5,7 +5,7 @@
 ## Q学習とは
 
 Q学習とは、モデルフリーな強化学習の方法です。
-簡単に説明すると、状態`s`と行動`a`から決まる行動評価`Q(s,a)`を用いて、評価が高い行動を選択していく方法です。
+簡単に説明すると、状態`s`と行動`a`から決まる行動評価関数`Q(s,a)`を用いて、評価が高い行動を選択していく方法です。
 `Q(s,a)`は、状態`s`のときに行動`a`がどの程度適切だったかを表す関数であり、`Q(s,a)`を適切に学習していくことで、`Q(s,a)`が最も高くなる行動`a`を選択することができるようになります。
 
 たとえば、状態`s_t`のエージェントが行動`a`を選択して、状態が`s_{t+1}`に遷移した場合、`Q(s_t,a)`を次式で更新する。
@@ -27,7 +27,7 @@ GymKitAgentを継承していますが、RandomAgentと比べて、以下のメ�
 * `def __exit__(self, exception_type, exception_value, traceback):`
   エピソードの終了時に呼び出されます。
 
-まず、`Q(s,a)`の更新処理をfitメソッド内に記述してください。
+まず、`Q(s,a)`の更新処理をfitメソッドの`Update Q(s, a)の箇所に記述してください。
 
 ```python
         future = 0 if done else np.max(current_actions)
@@ -37,7 +37,7 @@ GymKitAgentを継承していますが、RandomAgentと比べて、以下のメ�
 
 OpenAI Gymの環境からの観測結果はobservationとして渡されます。
 Q学習では観測結果から状態を判断する必要がありますが、今回はobservationを離散化することで状態として扱います。
-以下のメソッドでobservationからstateを取得するので、記述してください。
+以下のメソッドでobservationからstateを取得するので、記述してください(処理が`pass`で実装されているので置き換えてください)。
 
 ```python
     def observation_to_state(self, observation):
@@ -78,6 +78,6 @@ QAgentは以下のコマンドで実行することができます。
 
 ### 補足
 
-TBD: パラメータ
+TBD: パラメータ調整
 
 
