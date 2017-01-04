@@ -13,7 +13,8 @@ logger = logging.getLogger('q_agent')
 
 
 class QLearning(GymKitAgent):
-    def __init__(self, env, epsilon=0.1, alpha=0.1, gamma=0.9, epsilon_decay=None, alpha_decay=None):
+    def __init__(self, env, epsilon=0.1, alpha=0.1, gamma=0.9,
+                 epsilon_decay=None, alpha_decay=None, max_step=0):
         super().__init__(env)
         self.n_actions = env.action_space.n
 
@@ -27,6 +28,7 @@ class QLearning(GymKitAgent):
         self.state = None
         self.episode = 0
         self.steps = deque(maxlen=100)
+        self.max_step = max_step
 
     def act(self, observation):
         if self.state is None:
@@ -49,6 +51,10 @@ class QLearning(GymKitAgent):
         self.state = current_state
         self.values.append(value)
         self.step += 1
+        if self.max_step > 0 and self.step >= self.max_step:
+            return True
+        else:
+            return done
 
     def __enter__(self):
         self.episode += 1

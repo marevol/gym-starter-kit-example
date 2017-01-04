@@ -19,3 +19,6 @@ This repository provides examples for [Gym Starter Kit](https://github.com/marev
 
     $ gym-start --env-id Pong-v0 --agent pong.TrackAgent
 
+## Hands-on
+
+See [Hands-on Document](./handson/README.md).
