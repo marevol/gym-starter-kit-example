@@ -18,6 +18,7 @@
     $ python --version
     Python 3.5.2  # 期待通りのバージョンがインストールされていることを確認してください
 
+zshの場合は、.bash\_profileの代わりに.zshenvを利用してください。
 UbuntuやFedoraの場合は、~/.bash\_profileでなく、~/.bashrcを指定してください。
 macOSの場合は、brew install pyenvで入れることも可能です。
 詳しいことは、pyenvのサイトを確認してください。
@@ -35,7 +36,7 @@ Ubuntu 14.04の場合:
 
 上記のインストール後、gymをpipでインストールします。
 
-    $ pip install gym[all]
+    $ pip install gym
 
 ### Gym Starter Kitのインストール
 
